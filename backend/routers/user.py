@@ -1,2 +1,7 @@
-print("안녕하세요")
-print("파이썬입니다.")
+from fastapi import APIRouter
+
+router = APIRouter(prefix='/users', tags=['User'])
+
+@router.get('/')
+def login():
+    return "로그인"
