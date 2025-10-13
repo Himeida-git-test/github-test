@@ -1,1 +1,7 @@
-print('heelo')
+from fastapi import APIRouter
+
+router = APIRouter(prefix="/test", tags=["test"])
+
+@router.get('/')
+def testroot() :
+    return {"message" : "hello"}
